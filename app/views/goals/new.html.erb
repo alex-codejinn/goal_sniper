@@ -1,0 +1,6 @@
+<%= form_for Goal.new do |f| %>
+	<%= f.filepicker_field :image, button_text: "Add picture" %>
+	<%= f.text_field :title %>
+	<%= f.text_field :days_to_complete %>
+	<%= f.submit "Add Goal" %>
+<% end %>

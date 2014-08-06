@@ -1,0 +1,8 @@
+<% @goals.each do |goal| %>
+	<%= filepicker_image_tag goal.image %>
+	<%= goal.title %>
+	<%= goal.days_to_complete %>
+	<%= link_to "edit", "/goals/#{goal.id}/edit" %>
+	<%= link_to "delete", goal, method: :delete, data: {confirm: "Sure you want to delete this goal?"} %>
+	<br>
+<% end %>
